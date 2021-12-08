@@ -1,0 +1,33 @@
+h2 {
+  margin-top: 2%;
+}
+
+.column {
+  padding: 0 12px 0 12px;
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 1%;
+}
+
+.card {
+  margin-top: 2%;
+}
+.btn-secondary {
+  margin-right: 1%;
+}
+.btn-primary {
+  margin-right: 1%;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  text-align: center;
+}
