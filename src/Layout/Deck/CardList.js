@@ -5,8 +5,6 @@ import { deleteCard } from "../../utils/api/index";
 function CardList({ cards = [] }) {
   const history = useHistory();
   const { url } = useRouteMatch();
-  console.log("URL:", `${url}/edit`);
-  console.log(cards);
 
   const deleteHandler = async (cardId) => {
     const confirm = window.confirm(

@@ -28,7 +28,6 @@ function Home() {
       history.go(0);
     }
   };
-  console.log(deckInfo);
 
   const deckList = deckInfo.map((deck) => (
     <div key={deck.id}>

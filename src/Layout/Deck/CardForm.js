@@ -1,7 +1,7 @@
 import React from "react";
-import { useHistory, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-function CardForm({ deckId, formData, handleChange, handleSubmit }) {
+function CardForm({ formData, handleChange, handleSubmit }) {
   const history = useHistory();
   return (
     <>

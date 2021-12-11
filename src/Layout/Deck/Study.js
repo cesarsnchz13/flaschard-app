@@ -29,8 +29,6 @@ function Study() {
     return () => abortController.abort();
   }, [deckId]);
 
-  console.log("display", display);
-
   function flipButtonHandler() {
     setDisplay({
       ...display,

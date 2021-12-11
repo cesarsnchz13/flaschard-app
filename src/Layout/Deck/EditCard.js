@@ -19,7 +19,6 @@ function EditCard() {
     async function loadDeck() {
       try {
         const deck = await readDeck(deckId, abortController.signal);
-        console.log("Deck: ", deck);
         setDeckInfo(() => ({ ...deck }));
       } catch (error) {
         console.log("loadDeck error", error);
@@ -34,7 +33,6 @@ function EditCard() {
     async function loadCard() {
       try {
         const card = await readCard(cardId, abortController.signal);
-        console.log("CARD: ", card);
         setFormData(card);
       } catch (error) {
         console.log(error);
@@ -48,7 +46,6 @@ function EditCard() {
       ...formData,
       [target.name]: target.value,
     });
-    console.log("Form Data: ", formData);
   };
 
   const handleSubmit = async (event) => {

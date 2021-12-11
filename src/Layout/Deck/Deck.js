@@ -16,13 +16,12 @@ function Deck() {
   const { url } = useRouteMatch();
   const history = useHistory();
   const [deckInfo, setDeckInfo] = useState({ name: "", cards: [] });
-  console.log("DECKID: ", deckId);
+
   useEffect(() => {
     const abortController = new AbortController();
     async function loadDeck() {
       try {
         const deck = await readDeck(deckId, abortController.signal);
-        console.log("Deck: ", deck);
         setDeckInfo(() => ({ ...deck }));
       } catch (error) {
         console.log("loadDeck error", error);

@@ -13,7 +13,6 @@ function EditDeck() {
     async function loadDeck() {
       try {
         const deck = await readDeck(deckId, abortController.signal);
-        console.log("Deck: ", deck);
         setFormInfo(deck);
       } catch (error) {
         console.log("loadDeck error", error);
@@ -39,7 +38,6 @@ function EditDeck() {
       console.log("submit error: ", error);
     }
   };
-  console.log(useParams());
   return (
     <>
       <nav aria-label="breadcrumb">

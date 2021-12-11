@@ -16,7 +16,6 @@ function CreateDeck() {
       ...formData,
       [target.name]: target.value,
     });
-    console.log("Form Data: ", formData);
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
