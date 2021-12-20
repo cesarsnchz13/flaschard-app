@@ -50,6 +50,7 @@ function EditCard() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log("SUBMIT:", event.target);
     try {
       await updateCard(formData);
       history.go(`/decks/${deckId}`);

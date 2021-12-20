@@ -34,15 +34,21 @@ function AddCard() {
     });
   };
 
+  //create an if statement that alerts if the form is empty
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await createCard(deckId, formData);
-      history.go(0);
+      if (formData.front.length < 1 || formData.back.length < 1) {
+        alert("These fields cannot be empty");
+      } else {
+        await createCard(deckId, formData);
+        history.go();
+      }
     } catch (error) {
       console.log(error);
     }
   };
+
   return (
     <>
       <nav aria-label="breadcrumb">

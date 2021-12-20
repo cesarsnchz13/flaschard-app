@@ -30,27 +30,28 @@ function CardForm({ formData, handleChange, handleSubmit }) {
             onChange={handleChange}
           />
         </div>
-      </form>
-      <div className="row">
-        <div className="column">
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={() => history.goBack()}
-          >
-            Done
-          </button>
+
+        <div className="row">
           <div className="column">
             <button
-              type="submit"
-              className="btn btn-primary"
-              onClick={handleSubmit}
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => history.goBack()}
             >
-              Save
+              Done
             </button>
+            <div className="column">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                onClick={handleSubmit}
+              >
+                Save
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </>
   );
 }

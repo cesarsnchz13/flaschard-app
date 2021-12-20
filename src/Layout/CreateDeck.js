@@ -19,9 +19,14 @@ function CreateDeck() {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
+
     try {
-      const response = await createDeck(formData);
-      history.push(`/decks/${response.id}`);
+      if (formData.name.length < 1 || formData.description.length < 1) {
+        alert("These fields cannot be empty");
+      } else {
+        const response = await createDeck(formData);
+        history.push(`/decks/${response.id}`);
+      }
     } catch (error) {
       console.log("submit error: ", error);
     }
@@ -70,27 +75,28 @@ function CreateDeck() {
             onChange={handleChange}
           />
         </div>
-      </form>
-      <div className="row">
-        <div className="column">
-          <button
-            type="button"
-            className="btn btn-secondary"
-            onClick={() => history.push("/")}
-          >
-            Cancel
-          </button>
+
+        <div className="row">
           <div className="column">
             <button
-              type="submit"
-              className="btn btn-primary"
-              onClick={handleSubmit}
+              type="button"
+              className="btn btn-secondary"
+              onClick={() => history.push("/")}
             >
-              Submit
+              Cancel
             </button>
+            <div className="column">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                onClick={handleSubmit}
+              >
+                Submit
+              </button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
     </>
   );
 }
