@@ -32,3 +32,18 @@ This project implemented knowledge of the following React concepts:
 
 ## Application Preview
 
+### Home Page - Displaying Available Decks
+<img src="https://user-images.githubusercontent.com/84400955/148110321-793c1f0b-20c8-4f53-9c98-8dae68a43f6c.png" width="600">
+
+___
+
+### View Deck - Displaying Cards within Deck
+<img src="https://user-images.githubusercontent.com/84400955/148110315-119e55bf-10f9-4069-8585-9e1045ce6cd5.png" width="600">
+
+___
+
+### Study Deck - Displaying Flashcard
+<img src="https://user-images.githubusercontent.com/84400955/148110299-e36d0210-faa9-4cd1-82e7-43276ee295b6.png" width="600">
+
+
+
